@@ -8,7 +8,8 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // ✅ DAPAT NANDITO ITO — I-ADD KUNG WALA
-        $this->call(ProductSeeder::class);
+        $this->call([
+            BookSeeder::class,
+        ]);
     }
 }

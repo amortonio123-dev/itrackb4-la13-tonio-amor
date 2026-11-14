@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('home') }}">Product Inventory</a>
+        <a class="navbar-brand" href="{{ route('home') }}">Book App</a>
 
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -8,14 +8,14 @@
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}"
                        href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('products.*') ? 'active' : '' }}"
-                       href="{{ route('products.index') }}">Products</a>
+                    <a class="nav-link {{ request()->routeIs('books.*') ? 'active' : '' }}"
+                       href="{{ route('books.index') }}">Books</a>
                 </li>
             </ul>
         </div>

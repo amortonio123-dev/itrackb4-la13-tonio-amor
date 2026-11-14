@@ -3,14 +3,17 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Pagination\Paginator;  // ← ADD THIS
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function register(): void {}
+    public function register(): void
+    {
+        //
+    }
 
     public function boot(): void
     {
-        Paginator::useBootstrapFive();  // ← ADD THIS
+        Paginator::useBootstrapFive();
     }
 }

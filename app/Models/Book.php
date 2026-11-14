@@ -13,15 +13,13 @@ class Book extends Model
         'title',
         'author',
         'year',
-        'is_filipino',
+        'category',
+        'is_featured',
         'description',
     ];
 
-    protected function casts(): array
-    {
-        return [
-            'is_filipino' => 'boolean',
-            'year' => 'integer',
-        ];
-    }
+    protected $casts = [
+        'is_featured' => 'boolean',
+        'year'        => 'integer',
+    ];
 }

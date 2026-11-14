@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;    // ← ADD THIS LINE
-use App\Models\Category;  // ← ADD THIS LINE
+use App\Models\Book;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        $bookCount = Book::count();
+        $featuredCount = Book::where('is_featured', true)->count();
+
         return view('home', [
-            'productCount' => Product::count(),
-            'categoryCount' => Category::count(),
+            'bookCount'     => $bookCount,
+            'featuredCount' => $featuredCount,
         ]);
     }
 }
